@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furnico - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header>
+        <div class="navbar flex justify-between items-center p-4 bg-white shadow-md">
+            <a href="#" class="text-2xl font-bold text-gray-800">Furnico</a>
+            <nav class="space-x-6">
+                <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500">Shop</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500">About</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500">Contact</a>
+            </nav>
+            <div class="flex space-x-4">
+                <a href="#"><img src="cart-icon.png" alt="Cart" class="w-6 h-6"></a>
+                <a href="#"><img src="user-icon.png" alt="User" class="w-6 h-6"></a>
+            </div>
+        </div>
+        <div class="header-banner relative">
+            <img src="img/banner.png" alt="Banner Trang chủ Furnico" class="w-full h-48 md:h-96 object-cover">
+            <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">Trang chủ</h1>
+        </div>
+        
+    </header>
+
+    <!-- New Section -->
+    <section class="new-section py-12 bg-gray-50">
+        <h2 class="text-3xl text-center font-bold text-gray-800 mb-8">New</h2>
+        <div class="products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Product 1 -->
+            <div class="product bg-white p-4 rounded-lg shadow-md">
+                <img src="img/new1.png" alt="Syltherine" class="w-full h-64 object-cover mb-4">
+ 
+                <div class="product-info text-center">
+                    <h3 class="text-xl font-semibold text-gray-800">Syltherine</h3>
+                    <p class="text-gray-600">Stylish cafe chair</p>
+                    <p class="old-price text-gray-500 line-through">3.500.000đ</p>
+                    <p class="new-price text-xl text-blue-500">2.500.000đ</p>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product bg-white p-4 rounded-lg shadow-md relative">
+                <img src="img/new2.png" alt="Leviosa" class="w-full h-64 object-cover mb-4">
+                <div class="overlay absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 hover:opacity-100 transition-all">
+                    <button class="add-to-cart text-white bg-blue-500 px-4 py-2 rounded-full">Add to cart</button>
+                    <div class="actions mt-4 text-white space-x-4">
+                        <a href="#">&#x21A9; Share</a>
+                        <a href="#">&#9825; Like</a>
+                    </div>
+                </div>
+                <div class="product-info text-center">
+                    <h3 class="text-xl font-semibold text-gray-800">Leviosa</h3>
+                    <p class="text-gray-600">Stylish cafe chair</p>
+                    <p class="new-price text-xl text-blue-500">2.500.000đ</p>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product bg-white p-4 rounded-lg shadow-md">
+                <img src="img/new3.png" alt="Lolito" class="w-full h-64 object-cover mb-4">
+
+                <div class="product-info text-center">
+                    <h3 class="text-xl font-semibold text-gray-800">Lolito</h3>
+                    <p class="text-gray-600">Luxury big sofa</p>
+                    <p class="old-price text-gray-500 line-through">14.000.000đ</p>
+                    <p class="new-price text-xl text-blue-500">7.000.000đ</p>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product bg-white p-4 rounded-lg shadow-md">
+                <img src="img/new4.png" alt="Respira" class="w-full h-64 object-cover mb-4">
+
+                <div class="product-info text-center">
+                    <h3 class="text-xl font-semibold text-gray-800">Respira</h3>
+                    <p class="text-gray-600">Outdoor bar table and stool</p>
+                    <p class="new-price text-xl text-blue-500">5.000.000đ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+<!-- Shop Section -->
+<section class="shop-section">
+    <h2 class="title">Shop</h2>
+    <div class="grid1">
+        <div class="item"><img src="img/shop1.png" alt="Sản phẩm 1"></div>
+        <div class="item"><img src="img/shop2.png" alt="Sản phẩm 2"></div>
+        <div class="item"><img src="img/shop3.png" alt="Sản phẩm 3"></div>
+        <div class="item"><img src="img/shop4.png" alt="Sản phẩm 4"></div>
+    </div>
+</section>
+
+
+
+    <!-- Blog Section -->
+    <section class="blog-section py-12">
+        <h2 class="text-3xl text-center font-bold text-gray-800 mb-8">BLOG</h2>
+        <div class="blog-posts grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="blog-post bg-white p-4 rounded-lg shadow-md">
+                <img src="img/blog1.png" alt="Sofa Buying Guide" class="w-full h-64 object-cover mb-4">
+                <div class="blog-content">
+                    <div class="blog-title text-xl font-semibold text-gray-800">The Ultimate Sofa Buying Guide</div>
+                    <div class="blog-excerpt text-gray-600">Your guide to finding the perfect sofa for your home. Discover what features and materials to consider before buying...</div>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 mt-4 inline-block">Read More</a>
+                </div>
+            </div>
+            <div class="blog-post bg-white p-4 rounded-lg shadow-md">
+                <img src="img/blog2.png" alt="Bedroom Essentials" class="w-full h-64 object-cover mb-4">
+                <div class="blog-content">
+                    <div class="blog-title text-xl font-semibold text-gray-800">Bedroom Essentials</div>
+                    <div class="blog-excerpt text-gray-600">The importance of choosing the right bed frame and essentials to enhance your bedroom experience...</div>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 mt-4 inline-block">Read More</a>
+                </div>
+            </div>
+            <div class="blog-post bg-white p-4 rounded-lg shadow-md">
+                <img src="img/blog3.png" alt="TV Console Necessity" class="w-full h-64 object-cover mb-4">
+                <div class="blog-content">
+                    <div class="blog-title text-xl font-semibold text-gray-800">Why a TV Console is Essential</div>
+                    <div class="blog-excerpt text-gray-600">A stylish and functional TV console enhances your living space and provides practical storage options...</div>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 mt-4 inline-block">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<!-- Footer Feature Section -->
+<section class="bg-custom py-8">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-4 gap-4 text-center">
+        <div class="flex flex-col items-center">
+            <span class="text-3xl text-custom"><img src="img/icon1.png" alt=""></span>
+            <p class="text-dark font-semibold">High Quality</p>
+            <p class="text-sm text-gray-500">crafted from top materials</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <span class="text-3xl text-custom"><img src="img/icon2.svg" alt=""></span>
+            <p class="text-dark font-semibold">Warranty Protection</p>
+            <p class="text-sm text-gray-500">Over 2 years</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <span class="text-3xl text-custom"><img src="img/icon3.svg" alt=""></span>
+            <p class="text-dark font-semibold">Free Shipping</p>
+            <p class="text-sm text-gray-500">Order over 150 $</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <span class="text-3xl text-custom"><img src="img/icon4.svg" alt=""></span>
+            <p class="text-dark font-semibold">24 / 7 Support</p>
+            <p class="text-sm text-gray-500">Dedicated support</p>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="bg-white py-8">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <div>
+            <h4 class="text-lg font-semibold text-dark">Funiro.</h4>
+            <p class="text-gray-600">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+        </div>
+        <div class="space-y-2">
+            <h5 class="font-semibold text-dark">Links</h5>
+            <a href="#" class="block text-gray-600">Home</a>
+            <a href="#" class="block text-gray-600">Shop</a>
+            <a href="#" class="block text-gray-600">About</a>
+            <a href="#" class="block text-gray-600">Contact</a>
+        </div>
+        <div class="space-y-2">
+            <h5 class="font-semibold text-dark">Help</h5>
+            <a href="#" class="block text-gray-600">Payment Options</a>
+            <a href="#" class="block text-gray-600">Returns</a>
+            <a href="#" class="block text-gray-600">Privacy Policies</a>
+        </div>
+    </div>
+    <div class="mt-8 text-center text-gray-600">
+        <form class="inline-flex items-center">
+            <label for="newsletter" class="mr-2 text-dark">Newsletter</label>
+            <input type="email" id="newsletter" placeholder="Enter Your Email Address" class="border border-gray-300 rounded px-4 py-2">
+            <button type="submit" class="ml-2 px-4 py-2 bg-custom text-dark border border-dark rounded">Subscribe</button>
+        </form>
+    </div>
+</footer>
+
+</body>
+</html>

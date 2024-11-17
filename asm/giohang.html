@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Colors */
+    /* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Custom Colors */
+.bg-custom {
+    background-color: #FBF5EE;
+}
+
+.text-custom {
+    color: #C59D5F;
+}
+
+.text-dark {
+    color: #333;
+}
+
+.border-light {
+    border-color: #E3DDD8;
+}
+
+/* Product Page Styles */
+.product-page {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.tab:hover,
+.tab.active {
+    font-weight: bold;
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+/* Description */
+.description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Product Images */
+.product-images {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.product-images img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    background-color: #f0ebe3;
+    transition: transform 0.3s;
+}
+
+.product-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Related Products */
+.related-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.related-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #E3DDD8;
+    transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.old-price {
+    font-size: 14px;
+    color: #bbb;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.discount,
+.new {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.new {
+    background-color: #27ae60;
+}
+
+.show-more {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.show-more:hover {
+    background-color: #f0f0f0;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #E3DDD8;
+}
+
+footer h4,
+footer h5 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #666;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .product-images {
+        flex-direction: column;
+    }
+
+    .related-products {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="p-4 bg-light border-b border-gray-200">
+        <div class="container mx-auto flex items-center justify-between">
+          <a href="#" class="text-2xl font-semibold text-gray-800">Furniro</a>
+          <nav class="flex space-x-6">
+            <a href="thongtin.html" class="text-gray-600 hover:text-gray-800">Home</a>
+            <a href="sp.html" class="text-gray-600 hover:text-gray-800">Shop</a>
+            <a href="#" class="text-gray-600 hover:text-gray-800">About</a>
+            <a href="#" class="text-gray-600 hover:text-gray-800">Contact</a>
+          </nav>
+          <div class="flex space-x-4">
+            <button class="text-gray-600 hover:text-gray-800">🔍</button>
+            <button class="text-gray-600 hover:text-gray-800">❤️</button>
+            <button class="text-gray-600 hover:text-gray-800">🛒</button>
+          </div>
+        </div>
+      </header>
+    
+    <!-- Breadcrumb -->
+         <div class="header-banner relative">
+        <img src="img/banner.png" alt="Banner Trang chủ Furnico" class="w-full h-48 md:h-96 object-cover">
+        
+        <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">Trang chủ</h1>
+    </div>
+
+    <!-- Cart Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-8">
+        <!-- Product Table -->
+        <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-lg border border-light">
+            <table class="w-full">
+                <thead>
+                    <tr class="border-b border-light">
+                        <th class="text-left text-gray-600 py-3">Product</th>
+                        <th class="text-left text-gray-600 py-3">Price</th>
+                        <th class="text-left text-gray-600 py-3">Quantity</th>
+                        <th class="text-left text-gray-600 py-3">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b border-light">
+                        <td class="py-4 flex items-center space-x-4">
+                            <img src="img/sp1.png" alt="Asgaard Sofa" class="w-16 h-16 rounded">
+                            <span class="text-dark font-medium">Asgaard Sofa</span>
+                        </td>
+                        <td class="py-4 text-dark">25.000.000đ</td>
+                        <td class="py-4">
+                            <input type="number" value="1" class="w-16 border border-gray-300 rounded px-2 py-1">
+                        </td>
+                        <td class="py-4 text-dark">25.000.000đ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Cart Totals -->
+        <div class="bg-white p-6 rounded-lg shadow-lg border border-light">
+            <h3 class="text-xl font-semibold text-dark mb-4">Cart Totals</h3>
+            <div class="flex justify-between py-2 border-b border-light">
+                <span class="text-gray-600">Subtotal</span>
+                <span class="text-dark">25.000.000đ</span>
+            </div>
+            <div class="flex justify-between py-2">
+                <span class="text-lg font-semibold text-dark">Total</span>
+                <span class="text-lg font-semibold text-dark">25.000.000đ</span>
+            </div>
+            <button class="mt-6 w-full bg-custom text-dark py-2 rounded border border-dark">Check Out</button>
+        </div>
+    </main>
+
+    </div>
+    <section class="bg-custom py-8">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-4 gap-4 text-center">
+            <div class="flex flex-col items-center">
+                <span class="text-3xl text-custom"><img src="img/icon1.png" alt=""></span>
+                <p class="text-dark font-semibold">High Quality</p>
+                <p class="text-sm text-gray-500">crafted from top materials</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl text-custom"><img src="img/icon2.svg" alt=""></span>
+                <p class="text-dark font-semibold">Warranty Protection</p>
+                <p class="text-sm text-gray-500">Over 2 years</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl text-custom"><img src="img/icon3.svg" alt=""></span>
+                <p class="text-dark font-semibold">Free Shipping</p>
+                <p class="text-sm text-gray-500">Order over 150 $</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl text-custom"><img src="img/icon4.svg" alt=""></span>
+                <p class="text-dark font-semibold">24 / 7 Support</p>
+                <p class="text-sm text-gray-500">Dedicated support</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-white py-8">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h4 class="text-lg font-semibold text-dark">Funiro.</h4>
+                <p class="text-gray-600">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+            </div>
+            <div class="space-y-2">
+                <h5 class="font-semibold text-dark">Links</h5>
+                <a href="#" class="block text-gray-600">Home</a>
+                <a href="#" class="block text-gray-600">Shop</a>
+                <a href="#" class="block text-gray-600">About</a>
+                <a href="#" class="block text-gray-600">Contact</a>
+            </div>
+            <div class="space-y-2">
+                <h5 class="font-semibold text-dark">Help</h5>
+                <a href="#" class="block text-gray-600">Payment Options</a>
+                <a href="#" class="block text-gray-600">Returns</a>
+                <a href="#" class="block text-gray-600">Privacy Policies</a>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-600">
+            <form class="inline-flex items-center">
+                <label for="newsletter" class="mr-2 text-dark">Newsletter</label>
+                <input type="email" id="newsletter" placeholder="Enter Your Email Address" class="border border-gray-300 rounded px-4 py-2">
+                <button type="submit" class="ml-2 px-4 py-2 bg-custom text-dark border border-dark rounded">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Section</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .blog-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .blog-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .blog-post {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .blog-post img {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .blog-content {
+            text-align: left;
+            flex: 1;
+        }
+
+        .blog-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .blog-excerpt {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            font-size: 14px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more:hover {
+            color: #007BFF;
+        }
+
+        .read-more::after {
+            content: "→";
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <h2>BLOG</h2>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <img src="blog1.jpg" alt="Sofa Buying Guide">
+                <div class="blog-content">
+                    <div class="blog-title">The Ultimate Sofa Buying Guide</div>
+                    <div class="blog-excerpt">Your guide to finding the perfect sofa for your home. Discover what features and materials to consider before buying...</div>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="blog2.jpg" alt="Bedroom Essentials">
+                <div class="blog-content">
+                    <div class="blog-title">A Bedroom Must Have Some Thing Like This</div>
+                    <div class="blog-excerpt">The importance of choosing the right bed frame and essentials to enhance your bedroom experience...</div>
+                    <a href="#" class="read-more">About</a>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="blog3.jpg" alt="TV Console Necessity">
+                <div class="blog-content">
+                    <div class="blog-title">Why Is a TV Console a Must in Every House</div>
+                    <div class="blog-excerpt">A stylish and functional TV console enhances your living space and provides practical storage options...</div>
+                    <a href="#" class="read-more">About</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

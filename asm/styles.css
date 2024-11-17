@@ -1,0 +1,355 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #007BFF;
+}
+
+.icons a {
+    margin-left: 10px;
+}
+
+/* Header Banner */
+.header-banner {
+    background-image: url('header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.header-banner h1 {
+    font-size: 36px;
+}
+
+/* New Section */
+.new-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.new-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* General Styling */
+.new-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.new-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Product Styling */
+.product {
+    position: relative;
+    width: 250px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.product img {
+    width: 100%;
+    display: block;
+}
+
+.discount, .new-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FF6D6D;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.new-label {
+    background-color: #00C853;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #777;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+.new-price {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Phần Shop Section */
+.shop-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.shop-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Hai cột cho bố cục ảnh */
+    grid-template-rows: repeat(2, 1fr); /* Hai hàng cho bố cục ảnh */
+    gap: 0; /* Loại bỏ khoảng cách giữa các ảnh */
+    width: 100%;
+    max-width: 800px; /* Đặt giới hạn chiều rộng */
+    height: 500px; /* Chiều cao cố định cho grid */
+    margin: 0 auto; /* Canh giữa phần Shop */
+    overflow: hidden; /* Đảm bảo các ảnh nằm trong khung */
+    border-radius: 8px; /* Thêm bo tròn cho khung shop */
+}
+
+.shop-item {
+    overflow: hidden;
+}
+
+.shop-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo hình ảnh vừa với khung */
+    transition: transform 0.3s ease;
+}
+
+.shop-item:hover img {
+    transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.blog-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column; /* Xếp chồng dọc các bài blog */
+    gap: 2rem; /* Khoảng cách giữa các bài viết */
+    align-items: center; /* Căn giữa các bài viết */
+}
+
+.blog-post {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.blog-post img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.blog-content {
+    text-align: left;
+    flex: 1;
+}
+
+.blog-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.blog-excerpt {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #007BFF;
+}
+
+.read-more::after {
+    content: "→";
+    margin-left: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #E3DDD8;
+}
+
+footer h4,
+footer h5 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #666;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .product-images {
+        flex-direction: column;
+    }
+
+    .related-products {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+.bg-custom {
+    background-color: #FBF5EE;
+}
+.text-custom {
+    color: #C59D5F;
+}
+.text-dark {
+    color: #333;
+}
+.border-light {
+    border-color: #E3DDD8;
+}
+
+.custom-container {
+max-width: auto;
+margin: 1rem auto;
+padding: 1.5rem;
+background-color: #f7f5dfeb; /* Màu nền xám nhạt */
+border-radius: 8px; /* Bo góc */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+/* shop */
+
+.shop-section {
+    padding: 50px 0;
+    text-align: center;
+}
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
